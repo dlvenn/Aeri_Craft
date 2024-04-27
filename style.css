@@ -14,7 +14,7 @@
 /* Variables */
 :root {
     --main-color: rgb(247, 137, 203);
-    --second-color: #fffdff;
+    --second-color: #fcf9fb;
     --text-color: #1b1b1b;
     --bg-color: #f7e9f3;
 
@@ -42,7 +42,7 @@ header {
     align-items: center;
     padding: 10px 375px;
     transition: 0.5s linear;
-    background: var(--text-color)
+    background: #fdf4fb;
 }
 
 .logo {
@@ -53,7 +53,7 @@ header {
 }
 .logo span {
     padding: 8px 17px;
-    color: rgb(247, 137, 203);
+    color: var(--main-color);
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -64,19 +64,20 @@ header {
 }
 .navbar a {
     padding: 8px 17px;
-    color: var(--bg-color);
+    color: var(--main-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
 }
 .navbar a:hover {
     background: var(--main-color);
+    color: #f7e9f3;
     border-radius: 0.2rem;
     transition: 0.2s all linear;
 }
 
 #menu-icon {
-    color: var(--bg-color);
+    color: var(--main-color);
     font-size: 24px;
     z-index: 100001;
     cursor: pointer;
@@ -86,7 +87,7 @@ header {
 .home {
     width: 100%;
      min-height: 100vh;
-     background: url(images/home_softpink.png);
+     background: url(images/background_softpink.png);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center;
@@ -110,18 +111,20 @@ header {
     font-weight: 500;
 }
 .btn:hover {
-    background: #ff7cb9;
+    background: #ff7cb9
 }
 
 /* About */
 .about {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-    gap: 1.5rem;
-    background-color: var(--second-color);
+    gap: 2rem;
+    background-color: #fff;
 }
 .about-img img {
     border-radius: 0.5rem;
+    float: left;
+    margin-right: 20px;
 }
 .about-text h2 {
     font-size: 2.6rem;
@@ -142,7 +145,7 @@ header {
 
 /* Catalog */
 .catalog {
-    background: url(images/bg_softpink.png);
+    background: url(images/background_softpink_polos.png);
 }
 .catalog-container {
     display: grid;
@@ -164,8 +167,8 @@ header {
     height: 250px;
     object-fit: contain;
     object-position: center;
-    padding: 20px;
-    background: #faf3f8;
+    padding: 10px;
+    background: #f5ebf2;
     border-radius: 0.5rem;
 }
 .catalog-container .box h3 {
@@ -182,13 +185,14 @@ header {
 }
 .catalog-container .box .content a {
     padding: 0 1rem;
-    color: var(--text-color);
+    color: var(--bg-color);
+    background: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 4px;
     text-transform: uppercase;
 }
 .catalog-container .box .content a:hover {
-    background: var(--main-color);
+    background: #ff7cb9;
     color: var(--bg-color);
     transition: 0.2s all linear;
 }
@@ -237,7 +241,7 @@ header {
     margin-top: 20px;
 }
 .contact h3 {
-    color: #ff7cb9;
+    color: var(--main-color);
     font-weight: 500;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -283,7 +287,7 @@ header {
     margin-bottom: 10px;
 }
 .inputBox input[type="submit"] {
-    background: #f8519f;
+    background: var(--main-color);
     color: #fff;
     border: none;
     font-size: 1.1em;
@@ -298,10 +302,10 @@ header {
 
 /* info */
 .info {
-    background: rgb(253, 177, 223)
+    background: url(images/background_softpink_polos.png);
 }
 .info h3 {
-    color: #fff;
+    color: var(--main-color);
 }
 .info .infoBox div {
     display: flex;
@@ -312,7 +316,7 @@ header {
     min-width: 40px;
     height: 40px;
     color: #fff;
-    background: #f8519f;
+    background: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,11 +325,11 @@ header {
     margin-right: 15px;
 }
 .info .infoBox div p {
-    color: #fff;
+    color: var(--main-color);
     font-size: 1.1em;
 }
 .info .infoBox div a {
-    color: #fff;
+    color: var(--main-color);
     text-decoration: none;
     font-size: 1.1em;
 }
@@ -348,7 +352,7 @@ footer {
 
     position: relative;
     width: 100%;
-    background: url(images/bg_softpink.png);
+    background: url(images/background_softpink_polos.png);
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -375,7 +379,7 @@ footer .menu li a {
     text-decoration: none;
 }
 footer .menu li a:hover {
-    color: rgb(247, 137, 203);
+    color: var(--main-color);
     border-bottom: 0.1rem solid rgb(247, 137, 203);
     transition: 0.2s all linear;
 }
@@ -387,7 +391,7 @@ footer p {
     font-size: 1.1em;
 }
 footer p a:hover {
-    color: rgb(247, 137, 203);
+    color: var(--main-color);
 }
 
 
