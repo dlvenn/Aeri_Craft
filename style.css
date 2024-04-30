@@ -469,6 +469,26 @@ footer p a:hover {
     }
 }
 
+@media (max-width:1289px) {
+    header {
+        padding: 10px 454px 10px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home-text h1 {
+        font-size: 2.8rem;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .about {
+        align-items: center;
+    }
+}
+
 @media (max-width:1280px) {
     header {
         padding: 10px 446px 10px 60px;
