@@ -14,9 +14,10 @@
 /* Variables */
 :root {
     --main-color: rgb(247, 137, 203);
-    --second-color: #fffdff;
+    --second-color: #fcf9fb;
     --text-color: #1b1b1b;
-    --bg-color: #f7e9f3;
+    --textwhite-color: #f7e9f3;
+    --header-color: #fdf4fb;
 
     /* Box Shadow */
     --box-shadow: 2px 2px 10px 4px rgb(14 55 54 / 15%);
@@ -40,9 +41,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 375px;
+    padding: 10px 518px 10px 100px;
     transition: 0.5s linear;
-    background: var(--text-color)
+    background: var(--header-color);
 }
 
 .logo {
@@ -53,7 +54,7 @@ header {
 }
 .logo span {
     padding: 8px 17px;
-    color: rgb(247, 137, 203);
+    color: var(--main-color);
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 500;
@@ -64,19 +65,20 @@ header {
 }
 .navbar a {
     padding: 8px 17px;
-    color: var(--bg-color);
+    color: var(--main-color);
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 500;
 }
 .navbar a:hover {
     background: var(--main-color);
+    color: var(--textwhite-color);
     border-radius: 0.2rem;
     transition: 0.2s all linear;
 }
 
 #menu-icon {
-    color: var(--bg-color);
+    color: var(--main-color);
     font-size: 24px;
     z-index: 100001;
     cursor: pointer;
@@ -86,7 +88,7 @@ header {
 .home {
     width: 100%;
      min-height: 100vh;
-     background: url(images/home_softpink.png);
+     background: url(images/background_softpink.png);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center;
@@ -106,22 +108,24 @@ header {
     padding: 10px 40px;
     border-radius: 0.3rem;
     background: var(--main-color);
-    color: var(--bg-color);
+    color: var(--textwhite-color);
     font-weight: 500;
 }
 .btn:hover {
-    background: #ff7cb9;
+    background: #ff7cb9
 }
 
 /* About */
 .about {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-    gap: 1.5rem;
-    background-color: var(--second-color);
+    gap: 2rem;
+    background-color: #fff;
 }
 .about-img img {
     border-radius: 0.5rem;
+    float: left;
+    margin-right: 20px;
 }
 .about-text h2 {
     font-size: 2.6rem;
@@ -142,7 +146,7 @@ header {
 
 /* Catalog */
 .catalog {
-    background: url(images/bg_softpink.png);
+    background: url(images/background_softpink_polos.png);
 }
 .catalog-container {
     display: grid;
@@ -164,8 +168,8 @@ header {
     height: 250px;
     object-fit: contain;
     object-position: center;
-    padding: 20px;
-    background: #faf3f8;
+    padding: 10px;
+    background: #f5ebf2;
     border-radius: 0.5rem;
 }
 .catalog-container .box h3 {
@@ -182,14 +186,15 @@ header {
 }
 .catalog-container .box .content a {
     padding: 0 1rem;
-    color: var(--text-color);
+    color: var(--textwhite-color);
+    background: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 4px;
     text-transform: uppercase;
 }
 .catalog-container .box .content a:hover {
-    background: var(--main-color);
-    color: var(--bg-color);
+    background: #ff7cb9;
+    color: var(--textwhite-color);
     transition: 0.2s all linear;
 }
 
@@ -237,7 +242,7 @@ header {
     margin-top: 20px;
 }
 .contact h3 {
-    color: #ff7cb9;
+    color: var(--main-color);
     font-weight: 500;
     font-size: 1.4em;
     margin-bottom: 10px;
@@ -283,7 +288,7 @@ header {
     margin-bottom: 10px;
 }
 .inputBox input[type="submit"] {
-    background: #f8519f;
+    background: var(--main-color);
     color: #fff;
     border: none;
     font-size: 1.1em;
@@ -298,10 +303,10 @@ header {
 
 /* info */
 .info {
-    background: rgb(253, 177, 223)
+    background: url(images/background_softpink_polos.png);
 }
 .info h3 {
-    color: #fff;
+    color: var(--main-color);
 }
 .info .infoBox div {
     display: flex;
@@ -312,7 +317,7 @@ header {
     min-width: 40px;
     height: 40px;
     color: #fff;
-    background: #f8519f;
+    background: var(--main-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,11 +326,11 @@ header {
     margin-right: 15px;
 }
 .info .infoBox div p {
-    color: #fff;
+    color: var(--main-color);
     font-size: 1.1em;
 }
 .info .infoBox div a {
-    color: #fff;
+    color: var(--main-color);
     text-decoration: none;
     font-size: 1.1em;
 }
@@ -348,7 +353,7 @@ footer {
 
     position: relative;
     width: 100%;
-    background: url(images/bg_softpink.png);
+    background: url(images/background_softpink_polos.png);
     min-height: 100px;
     padding: 20px 50px;
     display: flex;
@@ -375,7 +380,7 @@ footer .menu li a {
     text-decoration: none;
 }
 footer .menu li a:hover {
-    color: rgb(247, 137, 203);
+    color: var(--main-color);
     border-bottom: 0.1rem solid rgb(247, 137, 203);
     transition: 0.2s all linear;
 }
@@ -386,8 +391,12 @@ footer p {
     margin-bottom: 10px;
     font-size: 1.1em;
 }
+footer a{
+    color: var(--main-color);
+    text-decoration: none;
+}
 footer p a:hover {
-    color: rgb(247, 137, 203);
+    color: var(--main-color);
 }
 
 
@@ -408,31 +417,108 @@ footer p a:hover {
 
 
 /* Media Queries */
-@media (max-width:1058px) {
+@media (max-width:1366px) {
     header {
-        padding: 16px 60px ;
+        padding: 10px 490px 10px 60px;
+        justify-content: space-between;
     }
     section {
         padding: 50px 60px;
     }
     .home-text h1 {
-        font-size: 2.4rem;
+        font-size: 3rem;
+    }
+    .about {
+        align-items: center;
     }
 }
-@media (max-width:991px) {
+
+@media (max-width:1200px) {
     header {
-        padding: 16px 4%;
+        padding: 10px 406px 10px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home-text h1 {
+        font-size: 2.8rem;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .about {
+        align-items: center;
+    }
+}
+
+@media (max-width:1130px) {
+    header {
+        padding: 10px 373px 10px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .home-text h1 {
+        font-size: 2.8rem;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .about {
+        align-items: center;
+    }
+}
+
+@media (max-width:1024px) {
+    header {
+        padding: 10px 60px;
+    }
+    section {
+        padding: 50px 60px;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+    .about {
+        align-items: center;
+    }
+}
+
+@media (max-width:900px) {
+    header {
+        padding: 10px 4%;
     }
     section {
         padding: 50px 4%;
     }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
     .home-text h1 {
         font-size: 2rem;
     }
+    .about {
+        align-items: center;
+    }
 }
+
 @media (max-width:768px) {
     header {
-        padding: 12px 4%;
+        padding: 10px 4%;
+    }
+    section {
+        padding: 50px 4%;
     }
     #menu-icon {
         display: initial;
@@ -444,7 +530,7 @@ footer p a:hover {
         right: 0;
         display: flex;
         flex-direction: column;
-        background: var(--second-color);
+        background: var(--header-color);
         row-gap: 1.4rem;
         padding: 20px;
         transition: 0.3s;
@@ -454,7 +540,7 @@ footer p a:hover {
         color:var(--text-color);
     }
     .navbar a:hover {
-        color:var(--bg-color);
+        color:var(--textwhite-color);
     }
     .navbar.active {
         top: 100%;
@@ -463,7 +549,76 @@ footer p a:hover {
         align-items: center;
     }
 }
-@media (max-width: 360px) {
+
+@media (max-width: 600px) {
+    header {
+        padding: 3px 4%;
+    }
+    .logo img {
+        width: 45px;
+    }
+    .home-text {
+        padding-top: 15px;
+    }
+    .home-text h1 {
+        font-size: 1.4rem;
+    }
+    .about-img {
+        order: 2;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 1.2rem;
+    }
+    .heading h2 {
+        font-size: 1.2rem;
+    }
+    .catalog-container img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        object-position: center;
+        padding: 10px;
+        background: #f5ebf2;
+        border-radius: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 9px 4%;
+    }
+    .logo img {
+        width: 53px;
+    }
+    .home-text {
+        padding-top: 15px;
+    }
+    .home-text h1 {
+        font-size: 1.4rem;
+    }
+    .about-img {
+        order: 2;
+    }
+    .about-text {
+        text-align: center;
+    }
+    .about-text h2 {
+        font-size: 1.2rem;
+    }
+    .heading h2 {
+        font-size: 1.2rem;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 320px) {
     header {
         padding: 9px 4%;
     }
@@ -487,6 +642,40 @@ footer p a:hover {
     }
     .heading h2 {
         font-size: 1.2rem;
+    }
+    .catalog-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        }
+    .catalog-container img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+        object-position: center;
+        padding: 10px;
+        background: #f5ebf2;
+        border-radius: 0.5rem;
+    }
+    .catalog-container .box h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0.5rem 0 0.5rem;
+    }
+    .catalog-container .box .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .catalog-container .box .content a {
+        padding: 0 0.5rem;
+        color: var(--textwhite-color);
+        background: var(--main-color);
+        border: 2px solid var(--main-color);
+        border-radius: 4px;
+        text-transform: uppercase;
     }
 }
 
