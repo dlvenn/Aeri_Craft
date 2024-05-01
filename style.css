@@ -1,5 +1,7 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,6 +11,7 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+    text-transform: capitalize;
 }
 
 /* Variables */
@@ -55,7 +58,7 @@ header {
 .logo span {
     padding: 8px 17px;
     color: var(--main-color);
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
     font-weight: 500;
 }
@@ -66,8 +69,8 @@ header {
 .navbar a {
     padding: 8px 17px;
     color: var(--main-color);
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-transform: capitalize;
     font-weight: 500;
 }
 .navbar a:hover {
@@ -100,8 +103,8 @@ header {
 .home-text h1 {
     font-size: 3.2rem;
     color: var(--main-color);
-    text-transform: uppercase;
     letter-spacing: 1px;
+    text-transform:capitalize;
 }
 
 .btn {
@@ -129,18 +132,19 @@ header {
 }
 .about-text h2 {
     font-size: 2.6rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .about-text p {
     font-size: 1.2rem;
     margin: 0.5rem 0 1.1rem;
+    text-transform: none;
 }
 .heading {
     text-align: center;
 }
 .heading h2 {
     font-size: 2.6rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
 }
 
@@ -175,7 +179,7 @@ header {
 .catalog-container .box h3 {
     font-size: 1rem;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-align: center;
     margin: 0.5rem 0 0.5rem;
 }
@@ -190,7 +194,7 @@ header {
     background: var(--main-color);
     border: 2px solid var(--main-color);
     border-radius: 4px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .catalog-container .box .content a:hover {
     background: #ff7cb9;
@@ -212,7 +216,6 @@ header {
 }
 .contactUs .title h2 {
     color: var(--text-color);
-    font-weight: 500;
 }
 
 .form {
@@ -300,6 +303,9 @@ header {
 .inputBox ::placeholder {
     color: #999;
 }
+
+
+
 
 /* info */
 .info {
@@ -390,6 +396,7 @@ footer p {
     margin-top: 15px;
     margin-bottom: 10px;
     font-size: 1.1em;
+    text-transform: none;
 }
 footer a{
     color: var(--main-color);
