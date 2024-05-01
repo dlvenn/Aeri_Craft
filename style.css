@@ -169,7 +169,7 @@ header {
     object-fit: contain;
     object-position: center;
     padding: 10px;
-    background: #f5ebf2;
+    background: var(--header-color);
     border-radius: 0.5rem;
 }
 .catalog-container .box h3 {
