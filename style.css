@@ -369,7 +369,7 @@ footer p a:hover {
 /* Media Queries */
 @media (max-width:1440px) {
     header {
-        padding: 10px 526px 10px 60px;
+        padding: 10px 520px 10px 60px;
         justify-content: space-between;
     }
     section {
@@ -385,7 +385,7 @@ footer p a:hover {
 
 @media (max-width:1366px) {
     header {
-        padding: 10px 490px 10px 60px;
+        padding: 10px 480px 10px 60px;
         justify-content: space-between;
     }
     section {
@@ -401,7 +401,7 @@ footer p a:hover {
 
 @media (max-width:1311px) {
     header {
-        padding: 10px 461px 10px 60px;
+        padding: 10px 450px 10px 60px;
     }
     section {
         padding: 50px 60px;
@@ -421,7 +421,7 @@ footer p a:hover {
 
 @media (max-width:1289px) {
     header {
-        padding: 10px 454px 10px 60px;
+        padding: 10px 435px 10px 60px;
     }
     section {
         padding: 50px 60px;
@@ -441,7 +441,7 @@ footer p a:hover {
 
 @media (max-width:1280px) {
     header {
-        padding: 10px 446px 10px 60px;
+        padding: 10px 430px 10px 60px;
     }
     section {
         padding: 50px 60px;
@@ -461,7 +461,7 @@ footer p a:hover {
 
 @media (max-width:1200px) {
     header {
-        padding: 10px 406px 10px 60px;
+        padding: 10px 390px 10px 60px;
     }
     section {
         padding: 50px 60px;
@@ -481,7 +481,7 @@ footer p a:hover {
 
 @media (max-width:1130px) {
     header {
-        padding: 10px 373px 10px 60px;
+        padding: 10px 365px 10px 60px;
     }
     section {
         padding: 50px 60px;
@@ -496,6 +496,21 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .contactUs {
+        padding: 20px;
+    }
+    .box {
+        padding: 50% 60;
+        position: relative;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "instagram"
+        "info"
+        "map";
     }
 }
 
