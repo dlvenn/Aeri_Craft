@@ -304,6 +304,7 @@ header {
     height: 100%;
 }
 
+
 /* Footer */
 footer {
     display: flex;
@@ -359,14 +360,6 @@ footer a{
 footer p a:hover {
     color: var(--main-color);
 }
-
-
-
-
-
-
-
-
 
 
 
