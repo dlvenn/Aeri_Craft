@@ -91,7 +91,7 @@ header {
 .home {
     width: 100%;
      min-height: 100vh;
-     background: url(images/background_softpink.png);
+     background: url(images/softpink\ home.png);
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center;
