@@ -44,7 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 518px 10px 100px;
+    padding: 10px 100px;
     transition: 0.5s linear;
     background: var(--header-color);
 }
@@ -80,6 +80,195 @@ header {
     transition: 0.2s all linear;
 }
 
+.navbar .btnLogin-popup {
+    padding: 5px 17px;
+    color: var(--textwhite-color);
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 0.2rem;
+    cursor: pointer;
+    outline: none;
+    margin-left: 325px;
+}
+
+.navbar .btnLogin-popup:hover {
+    background: #ff7cb9;
+    color: var(--textwhite-color);
+    border-radius: 0.2rem;
+    transition: 0.2s all linear;
+}
+
+/* Login */
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+ .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    text-transform: none;
+ }
+
+ .input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+ }
+
+ .remember-forgot {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+ }
+ .remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+ }
+ .remember-forgot a {
+    color: #162938;
+    text-decoration: none;
+ }
+ .remember-forgot a:hover {
+    text-decoration: underline;
+ }
+
+ .btnlogin {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+ }
+
+ .login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+ }
+ .login-register p a {
+    color: #162938;
+    text-decoration: none;
+    font-weight: 600;
+ }
+ .login-register p a:hover {
+    text-decoration: underline;
+
+ }
+
 #menu-icon {
     color: var(--main-color);
     font-size: 24px;
@@ -91,15 +280,15 @@ header {
 /* Home */
 .home {
     width: 100%;
-     min-height: 100vh;
-     background: url(images/softpink\ home.png);
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: center;
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-     align-items: center;
-     gap: 1.5rem;
+    min-height: 100vh;
+    background: url(images/softpink\ home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
+    align-items: center;
+    gap: 1.5rem;
 }
 .home-text h1 {
     font-size: 3.2rem;
@@ -184,24 +373,10 @@ header {
 
 .catalog-container .box h3 {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: capitalize;
     text-align: center;
     margin: 0.5rem 0 0rem;
-}
-
-.catalog-container .box .description {
-    display: flex;
-    align-items: center;
-    text-transform: none;
-    padding: 0.2px;
-}
-.catalog-container .box .description p {
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-transform: none;
-    text-align: center;  
-    margin: 0 0.9rem;
 }
 
 .catalog-container .box .price {
@@ -405,10 +580,7 @@ footer p a:hover {
 
 /* Media Queries */
 @media (max-width:1440px) {
-    header {
-        padding: 10px 520px 10px 60px;
-        justify-content: space-between;
-    }
+    
     section {
         padding: 50px 60px;
     }
@@ -421,10 +593,7 @@ footer p a:hover {
 }
 
 @media (max-width:1366px) {
-    header {
-        padding: 10px 480px 10px 60px;
-        justify-content: space-between;
-    }
+
     section {
         padding: 50px 60px;
     }
@@ -437,9 +606,7 @@ footer p a:hover {
 }
 
 @media (max-width:1311px) {
-    header {
-        padding: 10px 450px 10px 60px;
-    }
+    
     section {
         padding: 50px 60px;
     }
@@ -457,9 +624,7 @@ footer p a:hover {
 }
 
 @media (max-width:1289px) {
-    header {
-        padding: 10px 435px 10px 60px;
-    }
+    
     section {
         padding: 50px 60px;
     }
@@ -477,9 +642,7 @@ footer p a:hover {
 }
 
 @media (max-width:1280px) {
-    header {
-        padding: 10px 430px 10px 60px;
-    }
+    
     section {
         padding: 50px 60px;
     }
@@ -497,9 +660,7 @@ footer p a:hover {
 }
 
 @media (max-width:1200px) {
-    header {
-        padding: 10px 390px 10px 60px;
-    }
+    
     section {
         padding: 50px 60px;
     }
@@ -517,9 +678,7 @@ footer p a:hover {
 }
 
 @media (max-width:1130px) {
-    header {
-        padding: 10px 365px 10px 60px;
-    }
+    
     section {
         padding: 50px 60px;
     }
@@ -552,9 +711,7 @@ footer p a:hover {
 }
 
 @media (max-width:1024px) {
-    header {
-        padding: 10px 60px;
-    }
+    
     section {
         padding: 50px 60px;
     }
