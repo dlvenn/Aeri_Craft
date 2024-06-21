@@ -39,7 +39,11 @@ function checkFileType(file, cb) {
 
 // INDEX POSTS
 router.get('/', function (req, res, next) {
-    connection.query('SELECT * FROM posts ORDER BY id DESC', function (err, rows) {
+
+    //var login = 1;
+   
+    //if(login == 1) {
+        connection.query('SELECT * FROM posts ORDER BY id DESC', function (err, rows) {
         if (err) {
             req.flash('error', err);
             res.render('posts/index', { data: ''});
@@ -47,6 +51,10 @@ router.get('/', function (req, res, next) {
             res.render('posts/index', { data: rows });
         }
     });
+   //} else {
+   // res.render('index', { title: 'Express',  data: '' });
+   //}
+
 });
 
 // CREATE POST

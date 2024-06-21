@@ -122,6 +122,27 @@
 
       <!-- Container -->
       <div class="catalog-container">
+        <% if(data.length){
+          for(var i = 0; i < data.length; i++) {%>  
+        <div class="box">
+          <img src="/uploads/<%= data[i].gambar_buket %>" alt="" />
+          <h3><%= data[i].nama_buket %></h3>
+          <div class="price">
+            <p><%= data[i].harga %></p>
+          </div>
+          <div class="content">
+            <a href="https://wa.link/31umpz" target="_blank">Order Now</a>
+          </div>
+        </div>
+        <% }
+                                    
+        }else{ %>
+          <div class="box">data tidak ditemukan</div>
+        <% } %> 
+      </div>
+
+      <!--
+      <div class="catalog-container">
         <div class="box">
           <img src="images/the rosie bouquet.png" alt="" />
           <h3>the rosie <br> bouquet</h3>
@@ -320,6 +341,7 @@
           </div>
         </div>
       </div>
+      -->
     </section>
 
     <!-- Contact -->
