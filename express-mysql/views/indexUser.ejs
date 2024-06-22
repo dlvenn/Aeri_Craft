@@ -33,7 +33,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#catalog">Catalog</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><button class="btnLogin-popup">Login</button></li>
+        <li><button class="btnLogin-popup">Logout</button></li>
       </ul>
     </header>
 
@@ -90,26 +90,12 @@
 
       <!-- Container -->
       <div class="catalog-container">
-        <% if(data.length){
-          for(var i = 0; i < data.length; i++) {%>  
-        <div class="box">
-          <img src="/uploads/<%= data[i].gambar_buket %>" alt="" />
-          <h3><%= data[i].nama_buket %></h3>
-          <div class="price">
-            <p><%= data[i].harga %></p>
-          </div>
-          <div class="content">
-            <a href="https://wa.link/1kk8tp" target="_blank">Order Now</a>
-          </div>
-        </div>
-        <% }
-                                    
-        }else{ %>
-          <div class="box">data tidak ditemukan</div>
-        <% } %> 
+        <a href="/posts" class="btn btn-md btn-success mb-3">TAMBAH POST
+            <span class="button__icon">
+                <ion-icon name="add-circle-outline"></ion-icon>
+        </a>
       </div>
 
-      
     </section>
 
     <!-- Contact -->

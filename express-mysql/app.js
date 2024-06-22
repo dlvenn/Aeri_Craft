@@ -3,67 +3,83 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-//library
+var dotenv = require('dotenv');
+var mysql = require('mysql');
 var flash   = require('express-flash');
 var session = require('express-session');
+var bodyParser = require('body-parser');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var postsRouter = require('./routes/posts'); // <-- route posts
+dotenv.config({ path: './.env' });
 
-var app = express();
+const app = express();
+const port = 3080;
 
-// view engine setup
+let connection = mysql.createConnection({
+  host: process.env.DATABASE_HOST,
+  user: process.env.DATABASE_USER,
+  password: process.env.DATABASE_PASS,
+  database: process.env.DATABASE,
+});
+
+connection.connect((error) => {
+  if (error) {
+      console.log(error);
+  } else {
+      console.log("MYSQL Connected...");
+  }
+});
+
+// Middleware for session and flash messages
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true } 
+}));
+app.use(flash());
+
+// Body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Global variables for flash messages
+app.use(function (req, res, next) {
+    res.locals.success = req.flash('success');
+    res.locals.error = req.flash('error');
+    next();
+});
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-app.use(session({ 
-  cookie: { 
-    maxAge: 60000 
-  },
-  store: new session.MemoryStore,
-  saveUninitialized: true,
-  resave: 'true',
-  secret: 'secret'
-}))
+// Routes
+app.use('/', require('./routes/index'));
+app.use('/auth', require('./routes/auth'));
+app.use('/posts', require('./routes/posts'));
 
-app.use(flash())
-
-app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
-
-app.use((req, res, next) => {
-  console.log('Request URL:', req.originalUrl);
-  console.log('Request Method:', req.method);
-  console.log('Request Body:', req.body);
-  console.log('Request File:', req.file);
-  next();
+// Error handling
+app.use(function (req, res, next) {
+    next(createError(404));
 });
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/posts', postsRouter); // use route posts di Express
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+app.use(function (err, req, res, next) {
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+    res.status(err.status || 500);
+    res.render('error');
 });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+app.listen(port, () => {
+  console.log(`App is running at http://localhost:${port}`);
 });
 
 module.exports = app;
+
+
+
+

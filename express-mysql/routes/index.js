@@ -18,4 +18,12 @@ router.get('/', function(req, res, next) {
   //res.render('index', { title: 'Express' });
 });
 
+router.get('/indexUser', (req,res) => {
+  res.render('indexUser');
+});
+
+router.get('/login', (req, res) => {
+  res.render('login');
+});
+
 module.exports = router;
