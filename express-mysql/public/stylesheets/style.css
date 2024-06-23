@@ -201,6 +201,15 @@ header {
     gap: 1.5rem;
     margin-top: 1rem;
 }
+.catalog-containerU {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    max-width: 300px; 
+    text-align: center; 
+    margin-left: 450px;
+}
 .catalog-container .box {
     position: relative;
     padding: 10px;
@@ -429,7 +438,6 @@ footer p a:hover {
 
 /* Media Queries */
 @media (max-width:1440px) {
-    
     section {
         padding: 50px 60px;
     }
@@ -438,11 +446,13 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .catalog-containerU {
+        margin-left: 455px;
     }
 }
 
 @media (max-width:1366px) {
-
     section {
         padding: 50px 60px;
     }
@@ -452,10 +462,12 @@ footer p a:hover {
     .about {
         align-items: center;
     }
+    .catalog-containerU {
+        margin-left: 420px;
+    }
 }
 
 @media (max-width:1311px) {
-    
     section {
         padding: 50px 60px;
     }
@@ -469,11 +481,13 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .catalog-containerU {
+        margin-left: 395px;
     }
 }
 
 @media (max-width:1289px) {
-    
     section {
         padding: 50px 60px;
     }
@@ -487,11 +501,16 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .catalog-containerU {
+        margin-left: 386px;
     }
 }
 
 @media (max-width:1280px) {
-    
+    header {
+        padding: 10px 20px;    
+    }
     section {
         padding: 50px 60px;
     }
@@ -505,11 +524,16 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .catalog-containerU {
+        margin-left: 386px;
     }
 }
 
 @media (max-width:1200px) {
-    
+    header {
+        padding: 10px 2px;    
+    }
     section {
         padding: 50px 60px;
     }
@@ -524,10 +548,15 @@ footer p a:hover {
     .about {
         align-items: center;
     }
+    .catalog-containerU {
+        margin-left: 335px;
+    }
 }
 
 @media (max-width:1130px) {
-    
+    header {
+        padding: 10px 1px;    
+    }
     section {
         padding: 50px 60px;
     }
@@ -557,6 +586,9 @@ footer p a:hover {
         "info"
         "map";
     }
+    .catalog-containerU {
+        margin-left: 308px;
+    }
 }
 
 @media (max-width:1024px) {
@@ -574,6 +606,9 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .catalog-containerU {
+        margin-left: 250px;
     }
 }
 
@@ -594,6 +629,9 @@ footer p a:hover {
     }
     .about {
         align-items: center;
+    }
+    .catalog-containerU {
+        margin-left: 210px;
     }
 }
 
